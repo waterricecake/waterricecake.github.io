@@ -2,7 +2,7 @@
 layout: post
 title: 실시간 통신 리펙토링 SSE 교체
 categories: [개발]
-tags: [java, Spring Boot, nginx event stream, SSE, 실시간 통신]
+tags: [Java, Spring Boot, Nginx event stream, SSE, 실시간 통신]
 ---
 # 서론
 기존 마피아 투게더 게임은 실시간 통신을 `Polling`을 통해 구현해 두었다
