@@ -2,7 +2,7 @@
 layout: post
 title: Block/Non-Block vs Sync/Async
 categories: [학습, CS]
-tags: [ExecutorService, Test, 동시성, 동시성테스트]
+tags: [동시성]
 ---
 
 # 그게먼데....

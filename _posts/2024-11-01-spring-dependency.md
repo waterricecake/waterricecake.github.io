@@ -2,7 +2,7 @@
 layout: post
 title: Spring 의존성 관리하기 
 categories: [고찰]
-tags: [ExecutorService, Test, 동시성, 동시성테스트]
+tags: [의존성, AOP, DI, Event, Spring]
 ---
 
 # 서론
