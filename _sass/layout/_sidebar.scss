@@ -168,8 +168,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       &.active {
         .nav-link {
           color: var(--sidebar-active-color);
-          background-color: var(--sidebar-hover-bg);
-
           span {
             opacity: 1;
           }

@@ -42,9 +42,6 @@
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust"></i>
-      </button>
 
       {% if site.data.contact.size > 0 %}
         <span class="icon-border"></span>
@@ -53,7 +50,7 @@
 
     {% for entry in site.data.contact %}
       {% case entry.type %}
-        {% when 'github', 'twitter' %}
+        {% when 'github' %}
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
