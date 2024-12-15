@@ -11,7 +11,7 @@ order: 4
 <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/waterricecake%2Fgjbae1212%2Fhit-counter">
 </div>
 <div>
-<img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fruturum">
+<img src="https://mazassumnida.wtf/api/v2/generate_badge?boj=fruturum">
 </div>
 <div>
 <img src="https://leetcard.jacoblin.cool/waterricecake?theme=dark">
