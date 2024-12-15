@@ -1,0 +1,25 @@
+<br>
+<br>
+<iframe
+  id="youtube-player"
+class="embed-video"
+loading="lazy"
+src=""
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<script>
+  const videos = [
+    {% for video in site.data.playlist.videos %}
+  { id: "{{ video.id }}", title: "{{ video.title }}" }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+  ];
+
+  const player = document.getElementById("youtube-player");
+  const randomIndex = Math.floor(Math.random() * videos.length);
+  const video = videos[randomIndex];
+  player.src = `https://www.youtube.com/embed/${video.id}?autoplay=1&loop=1&playlist=${video.id}`;
+</script>
