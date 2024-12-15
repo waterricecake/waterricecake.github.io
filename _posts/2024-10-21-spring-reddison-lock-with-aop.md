@@ -3,6 +3,7 @@ layout: post
 title: Spring Redisson Lock 구현하기, 근데 AOP를 곁들인 
 categories: [개발, Redis]
 tags: [AOP, Java, Mafia together, Redis, Redis lock, Redisson, Spring, 동시성]
+comments: true
 ---
 
 # 읽기 전에

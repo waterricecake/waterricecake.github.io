@@ -3,6 +3,7 @@ layout: post
 title: 기술할짝 시리즈 2 - Node.js
 categories: [기술 할짝]
 tags: [Node.js]
+comments: true
 ---
 
 # 서론

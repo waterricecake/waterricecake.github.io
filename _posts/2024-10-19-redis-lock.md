@@ -3,6 +3,7 @@ layout: post
 title: Redis Lock 
 categories: [학습, Redis]
 tags: [DLM, Redis, Redlock, 동시선, 분산락]
+comments: true
 ---
 
 # 서론

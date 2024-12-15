@@ -3,6 +3,7 @@ layout: post
 title: 기술할짝 시리즈 1 - Kotlin 
 categories: [기술 할짝]
 tags: [Kotlin]
+comments: true
 ---
 
 # 서론

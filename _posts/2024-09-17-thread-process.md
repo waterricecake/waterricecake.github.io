@@ -3,6 +3,7 @@ layout: post
 title: 쓰레드와 프로세스의 차이는 무엇인가요? 
 categories: [면접, CS]
 tags: []
+comments: true
 ---
 
 ## 서론

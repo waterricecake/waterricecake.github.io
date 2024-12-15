@@ -3,6 +3,7 @@ layout: post
 title: Spring 동시성 테스트 
 categories: [개발, Redis]
 tags: [ExecutorService, Test, 동시성, 동시성테스트]
+comments: true
 ---
 
 # 동시성 구현 상황 만들기

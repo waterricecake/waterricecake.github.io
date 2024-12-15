@@ -3,6 +3,7 @@ layout: post
 title: 실시간 통신 리펙토링 SSE 교체
 categories: [개발]
 tags: [Java, Spring Boot, Nginx event stream, SSE, 실시간 통신]
+comments: true
 ---
 
 # 서론

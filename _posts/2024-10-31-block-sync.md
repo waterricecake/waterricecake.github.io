@@ -3,6 +3,7 @@ layout: post
 title: Block/Non-Block vs Sync/Async
 categories: [학습, CS]
 tags: [동시성]
+comments: true
 ---
 
 # 그게먼데....

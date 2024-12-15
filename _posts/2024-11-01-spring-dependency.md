@@ -3,6 +3,7 @@ layout: post
 title: Spring 의존성 관리하기 
 categories: [고찰]
 tags: [의존성, AOP, DI, Event, Spring]
+comments: true
 ---
 
 # 서론

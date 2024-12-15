@@ -3,6 +3,7 @@ layout: post
 title: Java로 Redis lock 구현하기
 categories: [학습, Redis]
 tags: [Java, Lettuce, Lock, Redis, Redisson, Spring, 동시성, 동시성테스트]
+comments: true
 ---
 
 # 읽기 전에
