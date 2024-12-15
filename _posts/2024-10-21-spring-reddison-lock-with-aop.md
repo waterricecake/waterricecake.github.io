@@ -25,7 +25,9 @@ tags: [AOP, Java, Mafia together, Redis, Redis lock, Redisson, Spring, 동시성
 
 이처럼 다음과 같은 동시성 이슈가 발생하게 된다.
 # 설계
+
 ![lock-architecture.png](../assets/img/post/2024-10-21/lock-architecture.png)
+
 1. Lock 어노테이션 존재시 aspect를 통해 관심 분리
 2. Redis 서버에 키 획득을 시도하고 실패시 구독
 3. 실패하여 구독할 경우 Redis server에 해당 키가 반환되었다는 이벤트 발행시 획득을 다시 시도

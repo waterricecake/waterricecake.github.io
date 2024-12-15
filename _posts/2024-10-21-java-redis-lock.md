@@ -8,7 +8,9 @@ tags: [Java, Lettuce, Lock, Redis, Redisson, Spring, 동시성, 동시성테스�
 # 읽기 전에
 
 [Redis의 락](../redis-lock)
+
 레디스의 락에 대해서 정리한 글이다
+
 # Spring의 Redis Framework
 Spring의 레디스 프레임 워크는 크게 3가지가 있다.
 
@@ -416,11 +418,15 @@ lock 되는 것을 확인해 볼 수 있다.
 100개에 대하여 (속도를 위해서 Lettuce에서 재요청을 위한 대기시간을 제거하였다)
 
 ## Lettuce
+
 ![spinlock-ratio.png](../assets/img/post/2024-10-21/spinlock-ratio.png)
+
 - 테스트 시작 이후 최고 사용량 26% ~ 28%
 
 ## Redisson
+
 ![redisson-ratio.png](../assets/img/post/2024-10-21/redisson-ratio.png)
+
 - 테스트 시작 이후 최고 사용량 21%~22%
 
 
