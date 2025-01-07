@@ -26,7 +26,7 @@ tags:
 
 ## 장애 비율
 
-![[assets/img/post/2024-12-18/error_rate.png]]
+![error_rate.png](../assets/img/post/2024-12-18/error_rate.png)
 
 - 통신사, FCM : 외부 서비스의 장애이므로 당사에서 처리 불가능
 - 내부 버그 : 복잡도가 높은 메시지 도메인
@@ -45,7 +45,7 @@ tags:
 
 ## 장애 현상
 
-![[assets/img/post/2024-12-18/error.png]]
+![error.png](../assets/img/post/2024-12-18/error.png)
 
 ## Kafka Exactly Once
 카프카는 메시지 전달하기 위한 시메틱을 몇가지 가지고 있음
@@ -54,20 +54,26 @@ tags:
 
 ### Exactly Once
 #### 멱등성 Producer
-  ![[assets/img/post/2024-12-18/exactly_once_1.png]]
+
+  ![exactly_once_1.png](../assets/img/post/2024-12-18/exactly_once_1.png)
+
   프로듀서와 파티션 사이의 중복을 막기위한 기능
   
   프로듀서가 보낸 메세지의 `ProducerID`가 `partition`이 가지고 있는 `seq`번호와 맞지 않으면 막으면서 중복을 제거(??? 이건 좀더 알아봐야 할듯)
 #### Transaction
-![[assets/img/post/2024-12-18/exactly_once_2.png]]
+
+![exactly_once_2.png](../assets/img/post/2024-12-18/exactly_once_2.png)
+
 프로듀서가 여러 메세지를 한 트랜섹션으로 묶고 싶을때 사용
   
 주의 : 프로듀서가 같은 트랜젝션에 여러 토픽의 메세지를 보낼경우 토픽별로 메세지가 각 컨슈머로 나누어 요청되어 다른 쓰레드에서 처리가 됨, 또한 아래 `msg b`, `msg c`의 경우 같은 그룸의 컨슈머에서 처리되어도 한 메시지가 실패하면 다른 메세지는 중복되어 처리될 수 있음 -> 비지니스 로직으로 멱등성을 보장해야함
   
-  ![[exactly_once_3.png]]
-  
+  ![exactly_once_3.png](../assets/img/post/2024-12-18/exactly_once_3.png)
+
 트랜젝션을 사용할 경우 `Producer`와 `Transaction Coordinator`(`broker`에 위치)의 핸드 쉐이킹이 일어난다.
-![[assets/img/post/2024-12-18/transaction_coordinator.png]]
+
+![transaction_coordinator.png](../assets/img/post/2024-12-18/transaction_coordinator.png)
+
 1. `Producer`가 처음 트랜섹션 생성을 할때 `Transaction Coordinator`에게 컨텍스트 생성을 요청
 2. `Producer`가 각 메세지를 전송할때 어떤 `Partition`에 있을지 `Transaction Coordinator`에게 전달, 이 후 `Transaction Coordinator`는 해당 정보를 관리
 3. `Producer`가 트랜섹션이 완료되었다고 알려주면, `Transaction Coordinator`가 `Broker`의 커밋 메세지를 트랜섹션에 포함되는 `Partition`에게 넣어줌
@@ -107,13 +113,14 @@ tags:
 
 ### 중복 제거 
 #### 아키텍쳐
-![[delete_duplicate.png]]
+
+![delete_duplicate.png](../assets/img/post/2024-12-18/delete_duplicate.png)
 
 producer에서 해쉬를 생성하고 redis에 캐싱하여 커슈머가 해쉬를  통해 중복 확인
 
 #### 정책 고민
 
-![[hash.png]]
+![hash.png](../assets/img/post/2024-12-18/hash.png)
 
 처음에는 Producer 쪽에서 수신자와 메시지 내용으로 해쉬 생성으로 고민
 
@@ -127,7 +134,7 @@ producer에서 해쉬를 생성하고 redis에 캐싱하여 커슈머가 해쉬�
 
 ## 캐시 용량 예측
 
-![[cache_capacity.png]]
+![cache_capacity.png](../assets/img/post/2024-12-18/cache_capacity.png)
 
 ## 롤백
 
